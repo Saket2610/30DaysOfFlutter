@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_first/home_page.dart';
 
 void main() {
   runApp(myapp());
@@ -9,14 +10,13 @@ class myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Material(
-        child: Center(
-          child: Container(
-            child: Text("welcome to flutter and suck my dick"),
-          ),
-        ),
-      ),
-    );
+    String name = "saket";
+    num temperature = 43;
+    var day = "tuesday";
+    const pi = 3.14;
+    // values in const cant be changed
+    //in case of var , it can take any value but it is assigned my the compiler
+    // num can take both kind int or double
+    return MaterialApp(home: HomePage());
   }
 }
