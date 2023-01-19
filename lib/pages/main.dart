@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first/pages/home_page.dart';
+import 'package:flutter_first/pages/login_page.dart';
 
 void main() {
   runApp(myapp());
@@ -19,9 +20,17 @@ class myapp extends StatelessWidget {
     //in case of var , it can take any value but it is assigned my the compiler
     // num can take both kind int or double
     return MaterialApp(
-      home: HomePage(),
-      themeMode: ThemeMode.dark,
+      // home: HomePage(),
+      theme: ThemeData(primarySwatch: Colors.red),
+      themeMode: ThemeMode.light,
       darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: "/Login",
+      routes: {
+        // slash wala front main dikhata hai
+        "/": (context) => login_page(),
+        "/Login": (context) => HomePage()
+        // login_page class ka naam hai
+      },
     );
   }
 
