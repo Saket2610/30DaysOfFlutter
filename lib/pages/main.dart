@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_first/pages/home_page.dart';
 import 'package:flutter_first/pages/login_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(myapp());
@@ -21,10 +22,14 @@ class myapp extends StatelessWidget {
     // num can take both kind int or double
     return MaterialApp(
       // home: HomePage(),
-      theme: ThemeData(primarySwatch: Colors.red),
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+        fontFamily: GoogleFonts.lato().fontFamily,
+        // primaryTextTheme: GoogleFonts.latoTextTheme()
+      ),
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/Login",
+      // initialRoute: "/",
       routes: {
         // slash wala front main dikhata hai
         "/": (context) => login_page(),
