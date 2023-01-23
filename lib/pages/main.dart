@@ -31,7 +31,7 @@ class myapp extends StatelessWidget {
       ),
       themeMode: ThemeMode.light,
       darkTheme: ThemeData(brightness: Brightness.dark),
-      // initialRoute: "/",
+      initialRoute: MyRoutes.HomeRoute,
       routes: {
         // slash wala front main dikhata hai
         "/": (context) => login_page(),
