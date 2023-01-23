@@ -9,7 +9,13 @@ class HomePage extends StatelessWidget {
     int days = 30;
     return Scaffold(
       appBar: AppBar(
-        title: Text("welcome"),
+        // backgroundColor: Color.fromARGB(255, 99, 230, 143),
+        // elevation: 0.0,
+        // iconTheme: IconThemeData(color: Colors.black38),
+        title: Text(
+          "welcome",
+          // style: TextStyle(color: Colors.red),
+        ),
       ),
       body: Center(
         // $days is known as string manipluataion and we can also
