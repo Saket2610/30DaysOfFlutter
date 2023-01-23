@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_first/pages/home_page.dart';
 import 'package:flutter_first/pages/login_page.dart';
 import 'package:flutter_first/utils/routes.dart';
+import 'package:flutter_first/widgets/Themes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -24,13 +25,9 @@ class myapp extends StatelessWidget {
     return MaterialApp(
       // home: HomePage(),
       // debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-        fontFamily: GoogleFonts.lato().fontFamily,
-        // primaryTextTheme: GoogleFonts.latoTextTheme()
-      ),
+      theme: MyTheme.lightTheme(context),
       themeMode: ThemeMode.light,
-      darkTheme: ThemeData(brightness: Brightness.dark),
+      darkTheme: MyTheme.DarkTheme(context),
       initialRoute: MyRoutes.HomeRoute,
       routes: {
         // slash wala front main dikhata hai
